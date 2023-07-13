@@ -34,12 +34,21 @@
     <a-scene loading-screen="enabled: false;" vr-mode-ui="enabled: false;" color-space="sRGB"
         renderer="colorManagement: true; logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;
              detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" id="scene" embedded>
-        <a-assets>
-            <a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item>
-        </a-assets>
-
+        
         <a-marker type="barcode" smooth="true" value="1">
-            <a-entity animation-mixer="loop: repeat" gltf-model="#animated-asset"></a-entity>
+            <a-image src="gif1.gif" position="0 0.5 0"></a-image>
+        </a-marker>
+
+        <a-marker type="barcode" smooth="true" value="2">
+            <a-image src="gif2.gif" position="0 0.5 0"></a-image>
+        </a-marker>
+
+        <a-marker type="barcode" smooth="true" value="3">
+            <a-image src="gif3.gif" position="0 0.5 0"></a-image>
+        </a-marker>
+
+        <a-marker type="barcode" smooth="true" value="4">
+            <a-image src="gif4.gif" position="0 0.5 0"></a-image>
         </a-marker>
 
         <a-entity camera></a-entity>
