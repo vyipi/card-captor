@@ -37,21 +37,11 @@
         renderer="colorManagement: true; logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;
              detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" id="scene" embedded>
         
-        <a-marker type="barcode" smooth="true" value="1" smooth-tolerance="0">
-            <a-video src="gif1.mp4" position="0 0.5 -1" rotation="-90 0 0" width="2" height="1.125" preload autoplay muted loop playsinline webkit-playsinline></a-video>
-        </a-marker>
-
-        <a-marker type="barcode" smooth="true" value="2" smooth-tolerance="0">
-            <a-video src="gif1.mp4" position="0 0.5 -1" rotation="-90 0 0" width="2" height="1.125" preload autoplay muted loop playsinline webkit-playsinline></a-video>
-        </a-marker>
-
-        <a-marker type="barcode" smooth="true" value="3" smooth-tolerance="0">
-            <a-video src="gif1.mp4" position="0 0.5 -1" rotation="-90 0 0" width="2" height="1.125" preload autoplay muted loop playsinline webkit-playsinline></a-video>
-        </a-marker>
-
-        <a-marker type="barcode" smooth="true" value="4" smooth-tolerance="0">
-            <a-video src="gif1.mp4" position="0 0.5 -1" rotation="-90 0 0" width="2" height="1.125" preload autoplay muted loop playsinline webkit-playsinline></a-video>
-        </a-marker>
+            <a-assets><a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item></a-assets>
+    
+            <a-marker type="barcode" smooth="true" value="1">
+                <a-entity animation-mixer="loop: repeat" gltf-model="#animated-asset"></a-entity>
+            </a-marker>
 
         <a-entity camera></a-entity>
     </a-scene>
