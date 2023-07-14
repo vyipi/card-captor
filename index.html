@@ -37,6 +37,7 @@
              detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" id="scene" embedded>
         
             <a-assets><a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item></a-assets>
+            <a-assets><a-asset-item id="mom-anim" src="assets/mom-anim.glb"></a-asset-item></a-assets>
     
             <a-marker type="barcode" smooth="true" value="1">
                 <a-entity animation-mixer="loop: repeat" gltf-model="#animated-asset"></a-entity>
@@ -63,7 +64,7 @@
             </a-marker>
 
             <a-marker type="barcode" smooth="true" value="4">
-                <a-entity animation-mixer="loop: repeat" gltf-model="#animated-asset"></a-entity>
+                <a-entity animation-mixer="loop: repeat" gltf-model="#mom-anim"></a-entity>
                 <a-plane position="0 0 0" 
                 rotation="-90 0 0"
               material="color: yellow">
