@@ -87,7 +87,17 @@
             var marker3 = document.getElementById("marker3");
             marker3.addEventListener("markerFound", function(e) {
                 var baby_anim = document.getElementById("baby-entity");
-                baby_anim.setAttribute("animation-mixer", "loop: repeat");
+                baby_anim.setAttribute("animation-mixer", "clip: *; loop: repeat");
+
+                baby_anim.addEventListener('animation-finished', function() {
+        // Remove the animation-mixer attribute
+        baby_anim.removeAttribute('animation-mixer');
+        
+        // Use a timeout to reset the animation smoothly
+        setTimeout(function() {
+            baby_anim.setAttribute('animation-mixer', 'clip: *; loop: repeat');
+        }, 100); // Adjust the timeout duration if needed
+    });
             });
 
             var marker4 = document.getElementById("marker4");
