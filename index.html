@@ -87,7 +87,9 @@
             var marker3 = document.getElementById("marker3");
             marker3.addEventListener("markerFound", function(e) {
                 var baby_anim = document.getElementById("baby-entity");
-                baby_anim.setAttribute("animation-mixer", "loop: repeat");
+                if (!baby_anim.hasAttribute("animation-mixer")) {
+                    baby_anim.setAttribute("animation-mixer", "loop: repeat");
+                }
             });
 
             var marker4 = document.getElementById("marker4");
