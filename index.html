@@ -88,14 +88,6 @@
             marker3.addEventListener("markerFound", function(e) {
                 var baby_anim = document.getElementById("baby-entity");
                 baby_anim.setAttribute("animation-mixer", "loop: repeat");
-
-                baby_anim.addEventListener('animation-finished', function() {
-                // Remove the animation-mixer attribute
-                baby_anim.removeAttribute('animation-mixer');
-        
-                // Re-add the animation-mixer attribute to reset the animation
-                baby_anim.setAttribute('animation-mixer', 'loop: repeat');
-                });
             });
 
             var marker4 = document.getElementById("marker4");
