@@ -36,15 +36,18 @@
         renderer="colorManagement: true; logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;
              detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;" id="scene" embedded>
         
-            <a-assets><a-asset-item id="mom-anim" src="assets/mom-anim.glb"></a-asset-item></a-assets>
-            <a-assets><a-asset-item id="bvmt-anim" src="assets/bvmt-anim.glb"></a-asset-item></a-assets>
+             <a-assets>
+                <a-asset-item id="mom-anim" src="assets/mom-anim.glb"></a-asset-item>
+                <a-asset-item id="bvmt-anim" src="assets/bvmt-anim.glb"></a-asset-item>
+                <img id="baby-gif" src="assets/baby.gif">
+            </a-assets>
     
             <a-marker type="barcode" smooth="true" value="1" id="marker1">
                 <a-entity animation-mixer="loop: repeat" gltf-model="#mom-anim"></a-entity>
                 <a-plane position="0 0 0" 
                 rotation="-90 0 0"
               material="color: red">
-       </a-plane>
+                </a-plane>
             </a-marker>
 
             <a-marker type="barcode" smooth="true" value="2" id="marker2">
@@ -52,11 +55,7 @@
             </a-marker>
 
             <a-marker type="barcode" smooth="true" value="3" id="marker3">
-                <a-entity animation-mixer="loop: repeat" gltf-model="#mom-anim"></a-entity>
-                <a-plane position="0 0 0" 
-                rotation="-90 0 0"
-              material="color: blue">
-       </a-plane>
+                <a-plane position="0 0 0" rotation="-90 0 0" material="shader: gif; src: #baby-gif;"></a-plane>
             </a-marker>
 
             <a-marker type="barcode" smooth="true" value="4" id="marker4">
